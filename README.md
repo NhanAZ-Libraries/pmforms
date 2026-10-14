@@ -20,7 +20,19 @@ projects:
         version: ^2.3.0
 ```
 
-See the upstream [demo plugin](https://github.com/dktapps-pm-pl/pmforms-demo) for form usage.
+## Demo plugin
+
+[`examples/DevToolsConsumer/`](examples/DevToolsConsumer/) is a runnable demo plugin adapted from the upstream [pmforms-demo](https://github.com/dktapps-pm-pl/pmforms-demo). It demonstrates `MenuForm` with a URL image, `ModalForm`, `CustomForm`, form close callbacks, custom form elements, and reading typed values from `CustomFormResponse`.
+
+Run one of these commands in game to open a form:
+
+```text
+/form menu
+/form modal
+/form custom
+```
+
+You can also target online players by name, for example `/form custom Steve`. The same example is built and analyzed with DevTools in CI, using the `devtools.yml` beside its `plugin.yml`.
 
 ## Develop with DevTools
 
@@ -32,7 +44,7 @@ virions:
     version: ^2.3.0
 ```
 
-DevTools uses the shared source during development and shades the library into a standalone plugin PHAR when building. The production plugin does not need DevTools installed. The [DevToolsConsumer example](examples/DevToolsConsumer/) is built and analyzed in CI.
+DevTools uses the shared source during development and shades the library into a standalone plugin PHAR when building. The production plugin does not need DevTools installed. The demo plugin is also the [DevTools consumer example](examples/DevToolsConsumer/), built and analyzed in CI.
 
 ## Development checks
 
